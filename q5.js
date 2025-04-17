@@ -37,3 +37,7 @@ db.employees.insertOne({
 });
 
 db.employees.find().sort({name:1});//displays the documents in asceding order as of names and for descending order use "-1"
+
+db.employees.find({"address.city" : "Hyderabad"});//to access object fields
+
+db.employees.find({skills: "Java"});

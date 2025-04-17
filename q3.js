@@ -21,3 +21,5 @@ db.users.find().skip(1); //skips the first one
 
 db.users.find().skip(2); //skips the first 2
 
+db.users.countDocument(); //gives the count 
+

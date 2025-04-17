@@ -21,3 +21,8 @@ db.employees.updateMany(
     {},
     {$set: {org: "Wipro"}}
 )
+
+db.employees.updateMany(
+    {email: "mike@example.com"},
+    {$set: {org: "Wipro"}}
+)

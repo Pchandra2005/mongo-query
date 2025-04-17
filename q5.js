@@ -35,3 +35,5 @@ db.employees.insertOne({
     skilss: ["Java", "Python"],
     date: Date()
 });
+
+db.employees.find().sort({name:1});//displays the documents in asceding order as of names and for descending order use "-1"

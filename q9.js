@@ -26,3 +26,17 @@ db.employees.updateMany(
     {email: "mike@example.com"},
     {$set: {org: "Wipro"}}
 )
+
+db.employees.updateOne(
+    {email: "brian@gmail.com"},
+    {$set : {org: "Wipro"}},
+    {upsert : true}
+)
+
+db.employees.find(
+    {daprtment: {$in:["HR","IT"]}} //anyone from HR or IT will displayed. acts as or operator
+)
+
+db.employees.find(
+    {daprtment: {$nin:["HR","IT"]}} //anyone not from HR or IT will displayed. acts as or operator
+)
